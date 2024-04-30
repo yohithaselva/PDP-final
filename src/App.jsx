@@ -1,5 +1,5 @@
 import "./App.css";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, } from "react-router-dom";
 import Login from "./Components/Login";
 import Home from "./Pages/Home"
 import VedioN from "./Pages/VedioN";
@@ -14,7 +14,7 @@ import Contact from "./Pages/Contact";
 function App() {
   return (
     <>
-      <Router>
+    <BrowserRouter>
         <Routes>
           <Route path="/" element= {<Login/>} />
           <Route path="/Student_Login" element={<Student />} />
@@ -27,7 +27,7 @@ function App() {
           <Route path="/QP" element={<QP />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
-      </Router>
+      </BrowserRouter>
     </>
   );
 }
